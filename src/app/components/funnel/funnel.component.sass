@@ -1,0 +1,75 @@
+@import ../../../styles
+    
+.funnel-button-apply
+    @extend .normal-text
+    background-color: $bloomreach-color-normal !important
+    transition: $speed-normal
+
+    &:active 
+        @extend .normal-text
+        background-color: $bloomreach-color-active !important
+
+    &:hover
+        @extend .normal-text
+        background-color: $bloomreach-color-hover
+
+.funnel-link-button-danger
+    background-color: transparent !important
+    color: $bloomreach-danger-color-normal
+    font-weight: 500
+    transition: $speed-normal
+
+    &:active 
+        color: $bloomreach-danger-color-active !important
+
+    &:hover
+        color: $bloomreach-danger-color-hover
+
+.funnel-link-button-primary
+    background-color: transparent !important
+    color: $bloomreach-primary-color-normal
+    font-weight: 500
+    transition: $speed-normal
+
+    &:active 
+        color: $bloomreach-primary-color-active !important
+
+    &:hover
+        color: $bloomreach-primary-color-hover
+
+.funnel-icon-button-primary
+    background-color: transparent !important
+    color: $bloomreach-secondary-color-normal
+    transition: $speed-normal
+
+    &:active 
+        color: $bloomreach-secondary-color-active !important
+
+    &:hover
+        color: $bloomreach-secondary-color-hover
+
+.funnel-title
+    color: $normal-text-color !important
+    font-weight: 700 !important
+
+.funnel-input-style
+    background-color: transparent
+    color: $bloomreach-secondary-color-normal
+    border-color: $button-border-color
+    border-radius: 0    
+    transition: $speed-normal
+    min-width: 120px
+
+    &:active
+        background-color: transparent !important
+        color: $normal-text-color
+        border-color: $button-border-color
+
+    &:hover
+        background-color: transparent
+
+.form-control:focus
+    border-color: $button-border-color
+
+input::placeholder
+    @extend .placeholder-text

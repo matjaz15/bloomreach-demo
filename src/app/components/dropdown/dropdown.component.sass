@@ -1,0 +1,66 @@
+@import ../../../styles
+
+.dropdown-toggle::after 
+    display: flex
+    margin-top: 10px
+    float: right
+
+.dropdown-field
+    min-width: 180px !important
+    max-width: 400px
+
+    &.small
+        min-width: 150px !important
+        max-width: 400px
+
+.dropdown-box
+    width: 600px !important
+
+    &.small
+        width: 350px !important
+
+.dropdown-item
+    &:hover
+        background-color: $bloomreach-color-hover
+
+input::placeholder
+    @extend .placeholder-text
+
+.dropdown-btn-style
+    background-color: $button-normal-color
+    color: $bloomreach-secondary-color-normal
+    border-color: $button-border-color
+    border-radius: 0    
+    transition: $speed-normal
+    min-width: 50%
+
+    &:active
+        background-color: $button-active-color !important
+        color: $normal-text-color
+        border-color: $button-border-color
+
+    &:hover
+        background-color: $button-normal-color
+
+.page-item-link
+    background-color: transparent !important
+    color: $bloomreach-bold-color-normal
+    font-weight: 500 
+    transition: $speed-normal
+
+    &:active 
+        color: $bloomreach-bold-color-active !important
+
+    &:hover
+        color: $bloomreach-bold-color-hover
+
+    &.active-link
+        color: $bloomreach-bold-color-active !important
+
+
+.btn:first-child:active
+    border-color: transparent !important
+
+.page-item-link-border
+    border-color: $bloomreach-color-hover !important
+
