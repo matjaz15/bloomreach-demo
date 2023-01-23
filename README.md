@@ -1,27 +1,13 @@
 # BloomreachDemo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+Description:
+Keep the following in mind:
+● Use angular CLI to solve the assignment.
+● Fetch the events and their attributes for the filter from this endpoint: https://br-fe-assignment.github.io/customer-events/events.json
+● Focus on good component structure with reusability and clear data flow in mind.
+● Try to work iteratively towards a functional solution which does not need to be feature complete.
+● A pixel perfect solution is not mandatory.
+● Log the data model into the console when the Apply filters button is clicked. We would like to see how you structure the data.
+● Send us a link to a GitHub repo with your solution
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Usage of the component can be found inside of app.component.html

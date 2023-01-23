@@ -1,0 +1,54 @@
+<div class="dropdown">
+  <button 
+    [classList]="'btn btn-secondary dropdown-field dropdown-toggle dropdown-btn-style ' + sizeClass" 
+    (click)="onDropdownClick()" 
+    type="button" 
+    data-bs-toggle="dropdown" 
+    data-bs-auto-close="outside"
+    aria-expanded="false"
+  >
+    <span [classList]="'float-start ' + (isItemSelected ? 'normal-text' : '') ">{{dropdownLabel}}</span>
+  </button>
+  <ul #dropDownElement [classList]="'dropdown-menu p-0 dropdown-box pb-4 border border-0 shadow ' + sizeClass">
+
+    <div class="d-flex" *ngIf="hasSearch">
+      <div class="py-2 px-2" *ngIf="hasSearchTag">
+        <span class="badge border border-0 normal-text bg-light-2">{{searchTagLabel}}</span>
+      </div>
+
+      <input 
+        class="form-control border border-0 normal-text" 
+        #searchElement 
+        [(ngModel)]="searchText" 
+        (input)="onSearchInput()" 
+        [placeholder]="searchPlaceholder"
+      >
+    </div>
+    
+    <!-- Category field -->
+    <div *ngIf="hasPages">
+      <div class="d-flex justify-content-around" style="height: 70px;">
+        <div 
+          [classList]="pageStyle(page)"
+          *ngFor="let page of pages"
+        >
+          <button [classList]="pageButtonStyle(page)" (click)="onPageClick(page)">
+            <div><i [classList]="page.iconClass" style="scale: 2;"></i></div>
+            <div><span>{{page.label}}</span></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <hr class="m-0">
+    <li>
+      <a 
+        class="dropdown-item normal-text pointer" 
+        (click)="onItemClick(item)" 
+        *ngFor="let item of filteredSelection"
+      >
+        {{itemDisplay(item)}}
+      </a>
+    </li>
+  </ul>
+</div>
