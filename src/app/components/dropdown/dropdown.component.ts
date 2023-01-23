@@ -17,7 +17,7 @@ export class PageData {
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.sass']
 })
-export class DropdownComponent implements OnInit, OnChanges {
+export class DropdownComponent implements OnInit {
   @Input() selection: any
   @Input() setSelectedItem: any
   @Input() setSelectedPage: any
@@ -55,24 +55,7 @@ export class DropdownComponent implements OnInit, OnChanges {
     this.filteredSelection = this.selection
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes['setSelectedItem'] && this.setSelectedItem) {
-      // this.selectItem(this.setSelectedItem)
-      this.selectedItem = this.setSelectedItem
-      this.filteredSelection = this.selection
-      console.log(this.setSelectedItem)
-    }
-return
-    if (changes['setSelectedPage'] && this.setSelectedPage) {
-      this.selectPage(this.setSelectedPage)
-      this.filteredSelection = this.selection
-      console.log(this.setSelectedPage)
-    }
-  }
-
   ngDoCheck() {
-    return
-    // If setSelected has changed
     if (this.setSelectedItem && this.setSelectedItem !== undefined){
       const stringToCompare = JSON.stringify(this.setSelectedItem)
       if (this.previousSelectedItem && this.previousSelectedItem !== stringToCompare){
